@@ -1,4 +1,4 @@
-import styles from "./EstimateLayout.module.css";
+import styles from "./estimateLayout.module.css";
 import { useUserData } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";

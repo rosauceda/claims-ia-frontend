@@ -5,8 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5em;
-  /* gap: min(2em, 10em); */
+  padding-top: 5rem;
+  position: relative;
 }
 
 .wrapper{
@@ -14,24 +14,22 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .questionsContainer {
-  width: min(50em, 95%);
+  width: min(50rem, 95%);
   height: auto;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  gap: 1rem;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
-  /* position: absolute;
-  top: 10%; */
 }
 
 .questionsContainer table {
@@ -45,7 +43,7 @@
 .questionsContainer table th {
   background-color: #156fff;
   color: #ffffff;
-  padding: 0.4em;
+  padding: 0.4rem;
 }
 
 .questionsContainer table th:nth-child(1) {
@@ -61,7 +59,9 @@
 }
 
 .questionsContainer table tbody td {
+  padding: 0.1rem;
   text-align: center;
+  font-size: clamp(1.2vw, 1rem, 3vw);
 }
 
 .questionsContainer table tbody td:nth-child(2) {
@@ -86,18 +86,18 @@
 }
 
 .buttonsContainer {
-  width: min(50em, 95%);
-  height: 4em;
+  width: min(50rem, 95%);
+  height: 4rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 2em;
+  gap: 2rem;
 }
 
 .buttonsContainer button {
-  width: 12em;
-  height: 2.5em;
-  font-size: 1em;
+  width: 12rem;
+  height: 2.5rem;
+  font-size: 1rem;
   /* font-size: clamp(1.2vw, 1rem, 3vw); */
   display: flex;
   justify-content: center;
@@ -128,116 +128,26 @@
   background-color: #156fffd2;
 }
 
-/* IPHONE SE */
-@media (min-width: 350px) and (max-width: 980px){
-  .container{
-    position: relative;
-  }
-
-  .questionsContainer{
-    position: absolute;
-    top: 11%;
-  }
-  .questionsContainer table tbody td {
-    padding: 0.1rem;
-  }
-
-  .buttonsContainer{
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-@media (min-width: 390px) and (max-width: 980px) {
+@media (min-width: 380px) and (max-width: 414px){
   .questionsContainer table tbody td {
     padding: 0.4rem;
   }
 }
 
-@media (min-width: 400px) and (max-width: 980px) {
-  .questionsContainer{
-    position: absolute;
-    top: 9%;
-  }
-  .questionsContainer table tbody td {
-    padding: 0.5rem;
-  }
-}
-
-@media (min-width: 430px) and (max-width: 980px) {
+@media (min-width: 415px) and (max-width: 740px) and (min-height: 800px){
   .questionsContainer table tbody td {
     padding: 0.6rem;
   }
 }
 
-@media (min-width: 750px) and (max-width: 980px) {
-  .questionsContainer{
-    position: absolute;
-    top: 12%;
-  }
-
-  .buttonsContainer{
-    position: absolute;
-    bottom: 15%;
-  }
-}
-
-@media (min-width: 750px) and (min-height: 1024px){
-  .questionsContainer{
-    position: absolute;
-    top: 10%;
-  }
-
-  .buttonsContainer{
-    position: absolute;
-    bottom: 8%;
-  }
-}
-
-
-@media (min-width: 820px) and (min-height: 1180px){
-  .questionsContainer{
-    position: absolute;
-    top: 15%;
-  }
-
-  .buttonsContainer{
-    position: absolute;
-    bottom: 12%;
-  }
-}
-
-
-/* MY DESKTOP */
-@media (min-width: 980px) and (min-height: 680px){
-  .questionsContainer{
-    position: absolute;
-    top: 10%;
-  }
-
-  .questionsContainer table tbody td {
-    padding: 0.1rem;
-  }
-
-  .buttonsContainer{
-    position: absolute;
-    bottom: 0.2%;
-  }
-}
-
-@media (min-width: 1000px) and (min-height: 900px){
+@media (min-width: 767px) and (min-height: 850px){
   .wrapper{
-    height: 100%;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 70%;
   }
-  .questionsContainer{
-    position: static;
-  }
-  .buttonsContainer{
-    position: static;
-  }
+}
 
+@media (min-width: 850px) and (min-height: 850px){
+  .wrapper{
+    height: 50%;
+  }
 }
