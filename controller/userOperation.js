@@ -1,7 +1,7 @@
 export const logInUser = async ({ email, password }) => {
   try {
-    // const response = await fetch("https://claims.ai.onlinesolutionsusa.net:4433/api/logInUser", {
-      const response = await fetch("http://localhost:3000/api/logInUser", {
+    const response = await fetch("https://claims.ai.onlinesolutionsusa.net:4433/api/logInUser", {
+      // const response = await fetch("http://localhost:3000/api/logInUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
