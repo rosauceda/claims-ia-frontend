@@ -14,7 +14,7 @@ export default function CreateProjectContainer() {
   const [serviceTypeName, setServiceTypeName] = useState("");
   const [questionsView, setQuestionsView] = useState(false);
 
-  const pageSize = 15;
+  const pageSize = 14;
   const [currentPage, setCurrentPage] = useState(0);
   const totalPages = Math.ceil(data.length / pageSize);
   const startingIndex = currentPage * pageSize;

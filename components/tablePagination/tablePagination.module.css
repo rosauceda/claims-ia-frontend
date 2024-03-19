@@ -37,13 +37,13 @@
   width: 100%;
   height: 100%;
   border-collapse: collapse;
-  font-size: clamp(0.8em, 1vw, 1em);
+  /* font-size: clamp(0.8em, 1vw, 1em); */
 }
 
 .questionsContainer table th {
   background-color: #156fff;
   color: #ffffff;
-  padding: 0.4rem;
+  padding: 0.1rem;
 }
 
 .questionsContainer table th:nth-child(1) {
@@ -59,9 +59,9 @@
 }
 
 .questionsContainer table tbody td {
-  padding: 0.1rem;
+  padding: 0.01rem;
   text-align: center;
-  font-size: clamp(1.2vw, 1rem, 3vw);
+  font-size: 0.9rem;
 }
 
 .questionsContainer table tbody td:nth-child(2) {
@@ -98,7 +98,6 @@
   width: 12rem;
   height: 2.5rem;
   font-size: 1rem;
-  /* font-size: clamp(1.2vw, 1rem, 3vw); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,26 +127,60 @@
   background-color: #156fffd2;
 }
 
-@media (min-width: 380px) and (max-width: 414px){
+
+@media (min-width: 380px){
   .questionsContainer table tbody td {
-    padding: 0.4rem;
+    padding: 0.5rem;
   }
 }
 
-@media (min-width: 415px) and (max-width: 740px) and (min-height: 800px){
+@media (min-width: 540px) and (max-width: 721px){
   .questionsContainer table tbody td {
-    padding: 0.6rem;
+    padding: 0.01rem !important;
   }
 }
 
-@media (min-width: 767px) and (min-height: 850px){
+
+/* FOR SPECIAL SCREEN IPHONE 14 PRO MAX */
+@media (min-width: 425px) and (min-height: 539px){
+  .questionsContainer table tbody td {
+    padding: 0.1rem !important;
+  }
+}
+
+
+/* FOR SOME TABLETS */
+@media (min-width: 1024px) and (min-height: 600px){
+  .questionsContainer table tbody td {
+    padding: 0.01rem !important;
+  }
+}
+
+@media (min-width: 430px) and (min-height: 932px){
+  .questionsContainer table tbody td {
+    padding: 0.5rem !important;
+  }
+}
+
+
+/*  XL SCREENS */
+@media(min-height: 1020px){
   .wrapper{
-    height: 70%;
+    height: 60%;
+  }
+  .questionsContainer table tbody td {
+    padding: 0.02rem !important;
   }
 }
 
-@media (min-width: 850px) and (min-height: 850px){
+@media(min-height: 1200px){
   .wrapper{
     height: 50%;
+  }
+}
+
+@media(min-height: 1300px){
+  .wrapper{
+    height: 40%;
   }
 }
