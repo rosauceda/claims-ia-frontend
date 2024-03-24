@@ -27,7 +27,43 @@ export default function CreateProjectContainer() {
   const [isOpenFirst, setIsOpenFirst] = useState(false);
   const [isOpenSecond, setIsOpenSecond] = useState(false);
 
-  const pageSize = 14;
+  const [pageSize, setPageSize] = useState(0);
+
+  useEffect(() => {
+    const SMALL_HEIGHT_THRESHOLD = 610;
+    const MEDIUM_HEIGHT_THRESHOLD = 750;
+    const LARGE_HEIGHT_THRESHOLD = 900;
+
+    const determinePageSize = (height) => {
+      if (height < SMALL_HEIGHT_THRESHOLD) {
+        return 8;
+      } else if (height < MEDIUM_HEIGHT_THRESHOLD) {
+        return 9;
+      } else if (height < LARGE_HEIGHT_THRESHOLD) {
+        return 13;
+      } else {
+        return 15;
+      }
+    };
+
+    const handleResize = () => {
+      const height = window.innerHeight;
+      const newSize = determinePageSize(height);
+      if (newSize !== pageSize) {
+        setPageSize(newSize);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [pageSize]);
+
+
   const [currentPage, setCurrentPage] = useState(0);
   const totalPages = Math.ceil(data.length / pageSize);
   const startingIndex = currentPage * pageSize;
